@@ -1,0 +1,37 @@
+---
+// Modules
+import { YouTube } from 'astro-embed';
+
+// Components
+import Layout from "../layouts/Layout.astro";
+import DisenadoLiderMercado from '../sections/screens/mi-energia/DisenadoLiderMercado.astro';
+import BajaTusCostos from '../sections/screens/mi-energia/BajaTusCostos.astro';
+import InstalacionFotovoltaicaComerciaIndustrial from '../sections/screens/mi-energia/InstalacionFotovoltaicaComerciaIndustrial.astro';
+import MonitoreeInstalacion from '../sections/screens/mi-energia/MonitoreeInstalacion.astro';
+import InversorRobusto from '../sections/screens/mi-energia/InversorRobusto.astro';
+import Fronius2024 from '../sections/screens/mi-energia/Fronius2024.astro';
+---
+
+<Layout title="Sistema Fotovoltaico Comercial e Industrial">
+  <h1 class="text-3xl font-bold text-center mt-10">Sistema Fotovoltaico Comercial e Industrial</h1>
+  
+  <section style="padding-top: 20px;">
+    <h2 class="text-2xl font-semibold text-center mt-6">Diseñado para el líder del mercado fotovoltaico</h2>
+    <DisenadoLiderMercado/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">Baja tus costos</h2>
+    <BajaTusCostos/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">Instalación Fotovoltaica Comercial e Industrial</h2>
+    <InstalacionFotovoltaicaComerciaIndustrial/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">Monitoreo de Instalación</h2>
+    <MonitoreeInstalacion/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">Inversor Robusto</h2>
+    <InversorRobusto/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">Fronius 2024</h2>
+    <Fronius2024/>
+  </section>
+</Layout>

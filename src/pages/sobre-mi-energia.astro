@@ -1,0 +1,68 @@
+---
+
+// Modules
+import { YouTube } from 'astro-embed';
+
+// Components
+import Layout from "../layouts/Layout.astro";
+import Fronius2024 from '../sections/screens/mi-energia/Fronius2024.astro';
+import BajaTusCostos from '../sections/screens/mi-energia/BajaTusCostos.astro';
+import InversorRobusto from '../sections/screens/mi-energia/InversorRobusto.astro';
+import PorQueMiEnergia from '../sections/screens/mi-energia/PorQueMiEnergia.astro';
+import VentajasVistazo from '../sections/screens/mi-energia/VentajasVistazo.astro';
+import EnergiaRenovable from '../sections/screens/mi-energia/EnergiaRenovable.astro';
+import BeneficiosFronius from '../sections/screens/mi-energia/BeneficiosFronius.astro';
+import BajaTusCostosList from '../sections/screens/mi-energia/BajaTusCostosList.astro';
+import MonitoreeInstalacion from '../sections/screens/mi-energia/MonitoreeInstalacion.astro';
+import DisenadoLiderMercado from '../sections/screens/mi-energia/DisenadoLiderMercado.astro';
+import QueDiferenciaMiEnergia from '../sections/screens/mi-energia/QueDiferenciaMiEnergia.astro';
+import SustentabilidadAmbiente from '../sections/screens/mi-energia/SustentabilidadAmbiente.astro';
+import SuministroEnergiaRespaldo from '../sections/screens/mi-energia/SuministroEnergiaRespaldo.astro';
+import FuncionInstalacionFotovoltaica from '../sections/screens/mi-energia/FuncionInstalacionFotovoltaica.astro';
+import InstalacionFotovoltaicaComerciaIndustrial from '../sections/screens/mi-energia/InstalacionFotovoltaicaComerciaIndustrial.astro';
+
+---
+
+<style>
+
+  .descubre-fronius-img {
+    background-image: url('/images/screens/fronius/img1.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fronius-web-img {
+    background-image: url('/images/screens/fronius/img4.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+</style>
+
+<Layout title="Fronius">
+
+  <section class="bg-neutral-800 text-white flex flex-col p-6 pt-24 md:px-20 lg:px-40 xl:px-60">
+
+		<p class="text-xl text-center font-medium">
+			Impulsamos la transición energética y descarbonización de México a través de soluciones energéticas 
+			altamente rentables y eficientes que agregan valor a nuestros clientes reduciendo sus gastos fijos 
+			y huella de carbono.
+		</p>
+
+	</section>
+
+  <PorQueMiEnergia/>
+
+  <QueDiferenciaMiEnergia/>
+
+  <BeneficiosFronius/>
+
+<SustentabilidadAmbiente/>
+  <section class="bg-neutral-800 text-white p-6 md:py-10 md:px-20 lg:px-40 xl:px-60">
+    <p class="text-xl font-medium text-center">Confía en nuestra experiencia y en la tecnología de vanguardia para tus necesidades solares.</p>
+  </section>
+
+	
+
+</Layout>
+

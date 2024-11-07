@@ -22,7 +22,8 @@ export default function Topbar (props:Props) {
     { label:AppRoutes.serviciosRoute.title },
     { label:AppRoutes.sobreNosotrosRoute.title, url:AppRoutes.sobreNosotrosRoute.route },
     { label:AppRoutes.financiamientoRoute.title, url:AppRoutes.financiamientoRoute.route },
-    { label:AppRoutes.contactanosRoute.title, url:AppRoutes.contactanosRoute.route }
+    { label:AppRoutes.contactanosRoute.title, url:AppRoutes.contactanosRoute.route },
+    { label: AppRoutes.sobreMiEnergiaRoute.title, url: AppRoutes.sobreMiEnergiaRoute.route } // Nuevo enlace
   ];
 
   // Styles
