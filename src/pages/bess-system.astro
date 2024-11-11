@@ -1,5 +1,4 @@
 ---
-
 // Components
 import Layout from '../layouts/Layout.astro';
 
@@ -8,30 +7,35 @@ import UsosBess from '../sections/screens/bess-system/UsosBess.astro';
 import QueEsBess from '../sections/screens/bess-system/QueEsBess.astro';
 import BeneficiosClaveBess from '../sections/screens/bess-system/BeneficiosClaveBess.astro';
 import BeneficiosAdicionalesBess from '../sections/screens/bess-system/BeneficiosAdicionalesBess.astro';
-
 ---
 
 <style>
-
   .main-bg-image {
     background-image: url('/images/screens/bess-system/img1.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
   }
-
 </style>
 
 <Layout>
 
   <div class="bg-gray-700 main-bg-image"/>
 
-  <QueEsBess/>
+  <div class="m-4">
+    <QueEsBess/>
+  </div>
 
-  <BeneficiosClaveBess/>
+  <div class="m-4">
+    <BeneficiosClaveBess/>
+  </div>
 
-  <UsosBess/>
+  <div class="m-4">
+    <UsosBess/>
+  </div>
 
-  <BeneficiosAdicionalesBess/>
+  <div class="m-4">
+    <BeneficiosAdicionalesBess/>
+  </div>
 
 </Layout>

@@ -17,6 +17,7 @@
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "astro": "^4.16.10",
+    "astro-carousel": "^2.1.0",
     "astro-embed": "^0.7.2",
     "clsx": "^2.1.0",
     "react": "^18.2.0",

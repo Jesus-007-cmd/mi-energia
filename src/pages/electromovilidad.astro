@@ -1,5 +1,4 @@
 ---
-
 // Components
 import Layout from "../layouts/Layout.astro";
 
@@ -11,40 +10,34 @@ import VentajasElectromovilidad from '../sections/screens/electromovilidad/Venta
 import MovilidadElectricaCamino from '../sections/screens/electromovilidad/MovilidadElectricaCamino.astro';
 import ConvertirFlotaEmpresarial from '../sections/screens/electromovilidad/ConvertirFlotaEmpresarial.astro';
 import SerAnfitrionEstacionCargo from '../sections/screens/electromovilidad/SerAnfitrionEstacionCargo.astro';
-
 ---
 
 <Layout title="Electromovilidad">
 
-  <div class='h-screen bg-gray-700'/>
+  <div class="mt-20"> <!-- Añadido margen superior -->
 
-  <SerAnfitrionEstacionCargo/>
+    <SerAnfitrionEstacionCargo/>
+    <ConvertirFlotaEmpresarial/>
+    <MovilidadElectricaCamino/>
+    <AdoptaEstacionCarga/>
+    <VentajasElectromovilidad/>
+    <ElectrificaTuFlotilla/>
+    <CargadorMQ200/>
 
-  <ConvertirFlotaEmpresarial/>
-  
-  <MovilidadElectricaCamino/>
-
-  <AdoptaEstacionCarga/>
-
-  <VentajasElectromovilidad/>
-
-  <ElectrificaTuFlotilla/>
-
-  <CargadorMQ200/>
-
-  <div class="grid grid-cols-1 md:grid-cols-2">
-
-    <div class="p-6 md:px-20 bg-gray-700 flex items-center">
-
-      <p class="font-medium text-2xl text-white">
-        Transforma tu empresa y recarga tus vehículos eléctricos con nuestra tecnología de punta.
-        Da el siguiente paso hacia el futuro de la movilidad eléctrica con Mi Energía MX.
-      </p>
-  
-    </div>
-  
-    <img src='/images/screens/electromovilidad/img2.jpg'/> 
+ <!-- Sección final con los mismos estilos que CargadorMQ200 -->
+    <section class="bg-gray-700 text-white p-6 md:pb-12 md:px-20 lg:px-60 flex flex-col gap-6"> <!-- Usando los mismos márgenes -->
+      <div class="items-center grid grid-cols-1 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+    <p class="font-medium text-lg md:text-xl text-center max-w-md mx-auto mb-4">
+  Transforma tu empresa y recarga tus vehícul os eléctricos con nuestra tecnología de punta.
+  Da el siguiente paso hacia el futuro de la movilidad eléctrica con Mi Energía MX.
+</p>
+        </div>
+        <div class="flex justify-center lg:justify-end">
+          <img src="/images/screens/electromovilidad/img2.jpg" class="h-[340px] object-cover rounded-md shadow-lg" /> <!-- Tamaño y estilos de imagen igualados -->
+        </div>
+      </div>
+    </section>
 
   </div>
-  
 </Layout>

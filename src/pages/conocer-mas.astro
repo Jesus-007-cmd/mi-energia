@@ -1,5 +1,4 @@
 ---
-// Components
 import Layout from '../layouts/Layout.astro';
 
 const providerList:ProviderTeamData[] = [
@@ -17,12 +16,11 @@ type ProviderTeamData = {
   name: string;
   image: string;
 }
-
 ---
 
 <Layout title='Conocer Más'>
 
-  <section class="h-96 w-screen bg-gray-700 text-white flex flex-col justify-center items-center p-6">
+  <section class="h-96 w-screen bg-gray-700 text-white flex flex-col justify-center items-center p-6 m-4">
 
     <h1 class="text-2xl font-semibold">Conocer Más</h1>
 
@@ -33,31 +31,24 @@ type ProviderTeamData = {
 
   </section>
 
-  <section class="w-screen bg-white flex flex-col p-6 text-gray-800">
+  <section class="w-screen bg-white flex flex-col p-6 text-gray-800 m-4">
 
     <h1 class="text-2xl font-semibold text-center">Proveedores</h1>
 
-    <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
 
-      {providerList.map((row) => (
-
-        <div class="flex flex-col text-center justify-center font-medium gap-2">
-  
+      {providerList.map((row, index) => (
+        <div key={index} class="flex flex-col text-center justify-center font-medium gap-2 p-4 border border-gray-200 rounded-md">
           <img 
             src={row.image} 
             alt={row.name} 
             class="w-40 mx-auto justify-self-center" 
           />
-
           <h3>{row.name}</h3>
-          
         </div>
-  
       ))}
 
     </div>
-
-    <div></div>
 
   </section>
 
