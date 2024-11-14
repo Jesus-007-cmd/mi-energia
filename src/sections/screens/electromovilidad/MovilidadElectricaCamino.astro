@@ -27,31 +27,24 @@ const backgroundStyle = {
 
 ---
 
-<div class='bg-gray-100 p-6 grid gap-6 grid-cols-1 md:grid-cols-2'>
+<div class="bg-gray-100 p-6 md:p-10 mx-4 md:mx-20 lg:mx-40">
 
-  <div class="grid grid-cols-2 gap-6 order-1 md:order-2">
-
+  <!-- Lista de beneficios -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 order-1 md:order-2">
     {
-
       movilidadList.map((row, index) => 
-  
-        <div class="text-center border rounded bg-white p-6 flex flex-col items-center">
-  
-          <div class="min-w-12 h-12 rounded border bg-gray-100 mb-4 flex items-center justify-center">
+        <div class="text-center border rounded bg-white p-4 md:p-6 flex flex-col items-center">
+          <div class="w-12 h-12 rounded border bg-gray-100 mb-4 flex items-center justify-center">
             <span class="text-blue-700 font-semibold">{index + 1}</span>
           </div>
-  
-          <h4 class="font-semibold">{row.title}</h4>
-          <p>{row.description}</p>
-  
+          <h4 class="font-semibold text-base md:text-lg lg:text-xl">{row.title}</h4>
+          <p class="text-sm md:text-base lg:text-lg">{row.description}</p>
         </div>
-  
       )
-
     }
-
   </div>
   
-  <div style={backgroundStyle} class="h-96 md:h-full rounded order-2 md:order-1"/>
-
+  <!-- Imagen de fondo -->
+  <div style={backgroundStyle} class="h-64 md:h-full rounded order-2 md:order-1"/>
 </div>
+

@@ -1,67 +1,183 @@
----
+<div class="carousel-container mx-4 md:mx-20 lg:mx-40">
 
-// Components
-import CustomGallery from '../../../components/custom/CustomGallery';
-
-const galleryList = [
-  '/images/screens/electromovilidad/img17.png',
-  '/images/screens/electromovilidad/img18.jpg',
-  '/images/screens/electromovilidad/img19.jpg',
-  '/images/screens/electromovilidad/img20.jpg',
-  '/images/screens/electromovilidad/img21.jpg',
-  '/images/screens/electromovilidad/img22.jpg'
-];
-
-const anfitrionList = [
-  {
-    title:'Educación',
-    description:'Fomentar la sostenibilidad adaptando en los campus cargadores de vehículos eléctricos para estudiantes, personal y visitantes.',
-    img:'/icons/book-cyan-700.svg'
-  },
-  {
-    title:'Flotillas',
-    description:'Ofrecemos monitoreo avanzado de flotillas para que su empresa pueda centrarse en la disponibilidad y confiabilidad de sus estaciones de carga y flota.',
-    img:'/icons/car-cyan-700.svg'
-  },
-  {
-    title:'Centros Comerciales',
-    description:'Ofrecer puntos de recarga en centros comerciales, ayudará a mejorar la experiencia del cliente, y contribuirá a la sostenibilidad y modernización.',
-    img:'/icons/build-cyan-700.svg'
-  },
-  {
-    title:'Restaurantes',
-    description:'La instalación de puntos de recarga para vehículos eléctricos, puede llegar hacer una toma de decisión para el cliente a la hora de elegir dónde ir a comer.',
-    img:'/icons/store-cyan-700.svg'
-  },
-  {
-    title:'Hoteles',
-    description:'Al incorporar estaciones de carga para vehículos eléctricos, no solo mejora la experiencia del huésped, sino también posiciona al hotel como un establecimiento moderno y sostenible.',
-    img:'/icons/hotel-cyan-700.svg'
-  },
-  {
-    title:'Casa Club Desarrollo Inmobiliario',
-    description:'Posicione su casa club como el más centrado en los residentes de la ciudad ofreciendo a residentes e invitados estaciones de carga para vehículos eléctricos. ',
-    img:'/icons/house-cyan-700.svg'
-  }
-];
-
----
-
-<div class="bg-gray-600 text-white flex flex-col gap-6 text-center p-6 pt-20 md:pb-12 md:px-20 lg:px-40 xl:px-60 ">
-
-  <div class="border rounded">
-    <CustomGallery photos={galleryList}/>
+  <!-- Encabezado del carrusel -->
+  <div class="carousel-header bg-white text-black text-center p-4 md:pb-2 px-0 flex flex-col ">
+    <h3 class="font-semibold text-xl mb-2 mt-20">
+      Conviértete en un punto de recarga para los conductores de autos eléctricos y genera ingresos adicionales
+    </h3>
+    <p class="mb-2 text-base">
+      Con nuestros cargadores comerciales ofrecemos un servicio de calidad y rapidez para los conductores de autos eléctricos.
+      Con esto generas un mayor flujo de personas a tu establecimiento y tendrás la oportunidad de generar ingresos a través de
+      las plataformas de cobro.
+    </p>
   </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-3 2xl:grid-cols-6 gap-6">
-
-    {anfitrionList.map((row) => 
-      <div class="text-center border-t-2 bg-gray-700 p-4 rounded">
-        <h2 class="font-semibold">{row.title}</h2>
-        <p>{row.description}</p>
-      </div>
-    )}
+  <!-- Imagen principal del carrusel -->
+  <div class="carousel">
+    <input type="radio" name="carousel" id="carousel-1" checked>
+    <input type="radio" name="carousel" id="carousel-2">
+    <input type="radio" name="carousel" id="carousel-3">
+    <input type="radio" name="carousel" id="carousel-4">
+    <input type="radio" name="carousel" id="carousel-5">
+    <input type="radio" name="carousel" id="carousel-6">
+    <div class="slides">
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img17.png');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img18.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img19.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img20.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img21.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img22.jpg');"></div>
+    </div>
 
   </div>
 
+  <!-- Texto alineado debajo de la imagen principal -->
+  <div class="carousel-text flex flex-col md:flex-row items-start text-center text-xs md:text-sm space-y-4 md:space-y-0 md:space-x-4 px-4 mt-0">
+  <label for="carousel-1" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Educación</h3>
+    <p class="text-xs md:text-sm">Fomentar la sostenibilidad adaptando en los campus cargadores de vehículos eléctricos para estudiantes, personal y visitantes.</p>
+      </label>
+    <label for="carousel-2" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Flotillas</h3>
+    <p class="text-xs md:text-sm">Ofrecemos monitoreo avanzado de flotillas para que su empresa pueda centrarse en la disponibilidad y confiabilidad de sus estaciones de carga y flota.</p>
+    </label>
+    <label for="carousel-3" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Centros Comerciales</h3>
+    <p class="text-xs md:text-sm">La instalación de puntos de recarga para vehículos eléctricos, puede llegar hacer una toma de decisión para el cliente a la hora de elegir dónde ir a comer.</p>
+    </label>
+    <label for="carousel-4" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Restaurantes</h3>
+    <p class="text-xs md:text-sm">La instalación de puntos de recarga para vehículos eléctricos, puede llegar hacer una toma de decisión para el cliente a la hora de elegir dónde ir a comer.</p>
+    </label>
+    <label for="carousel-5" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Hoteles</h3>
+    <p class="text-xs md:text-sm">Al incorporar estaciones de carga para vehículos eléctricos, no solo mejora la experiencia del huésped, sino también posiciona al hotel como un establecimiento moderno y sostenible.</p>
+    </label>
+    <label for="carousel-6" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Casa Club Desarrollo Inmobiliario</h3>
+    <p class="text-xs md:text-sm">Posicione su casa club como el más centrado en los residentes de la ciudad ofreciendo a residentes e invitados estaciones de carga para vehículos eléctricos.</p>
+    </label>
+  </div>
 </div>
+
+<style>
+ .carousel-header {
+  background-color: white;
+  color: black;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  z-index:-1;
+}
+
+.carousel-container {
+  text-align: center;
+  width: 100%;
+  
+  max-width: 81%;
+  margin: auto;
+  z-index: 1; 
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+}
+  
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* Animación de carrusel */
+@keyframes carousel {
+  0% { opacity: 1; }
+  16.66% { opacity: 1; }
+  33.32% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slide:nth-child(1) { animation: carousel 36s infinite; }
+.slide:nth-child(2) { animation: carousel 36s infinite 6s; }
+.slide:nth-child(3) { animation: carousel 36s infinite 12s; }
+.slide:nth-child(4) { animation: carousel 36s infinite 18s; }
+.slide:nth-child(5) { animation: carousel 36s infinite 24s; }
+.slide:nth-child(6) { animation: carousel 36s infinite 30s; }
+
+.carousel-text {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 5px;
+}
+
+/* Animación de cambio de color sin desvanecimiento */
+@keyframes color-change {
+  0%, 16.66% { color: lightgray; }
+  16.66%, 33.33% { color: black; }
+  33.33%, 100% { color: lightgray; }
+}
+
+.text-item {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  color: lightgray;
+  animation: color-change 36s infinite;
+}
+
+.text-item h3,
+.text-item hr,
+.text-item p {
+  color: inherit;
+  border-color: inherit;
+}
+
+.text-item:nth-child(1) { animation-delay: 0s; }
+.text-item:nth-child(2) { animation-delay: 6s; }
+.text-item:nth-child(3) { animation-delay: 12s; }
+.text-item:nth-child(4) { animation-delay: 18s; }
+.text-item:nth-child(5) { animation-delay: 24s; }
+.text-item:nth-child(6) { animation-delay: 30s; }
+
+.text-item h3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.text-item p {
+  font-size: 0.85em;
+  line-height: 1.2;
+}
+
+
+ </style>
