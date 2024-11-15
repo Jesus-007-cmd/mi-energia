@@ -1,5 +1,4 @@
 ---
-
 // Components
 import Layout from '../layouts/Layout.astro';
 import CustomGallery from '../components/custom/CustomGallery';
@@ -15,29 +14,28 @@ import QueDiferenciaMiEnergia from '../sections/screens/sobre-nosotros/QueDifere
 // Types
 import type { SectionRow } from '../components/custom/BlackWhiteContainerWithImage';
 
-const sectionRows:SectionRow[] = [
-	{
-		subtitle:'Sobre Nosotros',
-		title:'Mi Energía MX',
-		description:`
-			Nos enfocamos en brindar calidad y buen servicio, utilizando los mejores productos del mercado. 
-			Impulsamos la transición energética y descarbonización de México a través de soluciones energéticas 
-			altamente rentables y eficientes que agregan valor a nuestros clientes reduciendo sus gastos fijos y 
-			huella de carbono. Más de 30 años de experiencia en servicios de instalación energética.
-		`,
-		image:'/images/screens/sobre-nosotros/img3.jpeg',
-    
-	},
-	{
-		subtitle:'Sobre Nosotros',
-		title:'Beneficios',
-		description:`
-			Con nuestra asesoría experta, podrás reducir tus costos fijos y tú huella de carbono. 
-			Recupera tu inversión de manera rápida eliminando costos de energía. 
-			Además, te mostraremos cómo reducir tu consumo energético para seguir ahorrando a largo plazo.
-		`,
-		image:'/images/screens/sobre-nosotros/img6.jpeg',
-	}
+const sectionRows: SectionRow[] = [
+  {
+    subtitle: 'Sobre Nosotros',
+    title: 'Mi Energía MX',
+    description: `
+      Nos enfocamos en brindar calidad y buen servicio, utilizando los mejores productos del mercado. 
+      Impulsamos la transición energética y descarbonización de México a través de soluciones energéticas 
+      altamente rentables y eficientes que agregan valor a nuestros clientes reduciendo sus gastos fijos y 
+      huella de carbono. Más de 30 años de experiencia en servicios de instalación energética.
+    `,
+    image: '/images/screens/sobre-nosotros/img3.jpeg',
+  },
+  {
+    subtitle: 'Sobre Nosotros',
+    title: 'Beneficios',
+    description: `
+      Con nuestra asesoría experta, podrás reducir tus costos fijos y tu huella de carbono. 
+      Recupera tu inversión de manera rápida eliminando costos de energía. 
+      Además, te mostraremos cómo reducir tu consumo energético para seguir ahorrando a largo plazo.
+    `,
+    image: '/images/screens/sobre-nosotros/img6.jpeg',
+  },
 ];
 
 const photos = [
@@ -60,30 +58,30 @@ const photos = [
   '/images/screens/sobre-nosotros/img19.jpeg',
   '/images/screens/sobre-nosotros/img22.jpeg',
 ];
-
 ---
 
-<Layout title='Sobre Nosotros'>
+<Layout title="Sobre Nosotros">
+  <!-- Sección con video de fondo -->
+  <div class="relative w-full h-[100vh]">
+    <BackgroundWithVideo 
+      url="https://blau-app-storage.s3.amazonaws.com/consultorias/mi-energia/MiEnergia-02.mov" 
+      class="absolute top-0 left-0 w-full h-full object-cover"
+    />
 
-  <BackgroundWithVideo 
-    url="https://blau-app-storage.s3.amazonaws.com/consultorias/mi-energia/MiEnergia-02.mov"
-  />
+    <!-- Logos de redes sociales sobre el video -->
+    <div class="absolute top-4 right-4 flex gap-6 z-10">
+      <img src="/images/mi-energia-logo/fronius-logo.jpeg" class="h-14" alt="Fronius logo" />
+      <img src="/images/screens/sobre-nosotros/img23.png" class="h-12" alt="Fronius logo ovalo" />
+    </div>
+  </div>
 
-  <PorQueMiEnergia/>
+  <!-- Secciones adicionales -->
+  <PorQueMiEnergia />
+  <QueDiferenciaMiEnergia />
+  <BeneficiosFronius />
+  <BlackWhiteContainerWithImage sectionRows={sectionRows} />
+  <MisionVision />
 
-  <QueDiferenciaMiEnergia/>
-
-  <BeneficiosFronius/>
-
-  <BlackWhiteContainerWithImage
-    sectionRows={sectionRows} 
-  />
-
-  <MisionVision/>
-
-	<CustomGallery 
-    photos={photos} 
-    client:load
-  />
-
+  <!-- Galería de imágenes con el componente ajustado -->
+  <CustomGallery photos={photos} client:load />
 </Layout>

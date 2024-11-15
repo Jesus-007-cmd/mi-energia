@@ -1,25 +1,30 @@
 ---
-
 const backgroundImage = {
   backgroundImage: 'url(/images/screens/monta-cargas/img2.jpg)',
-  backgroundSize: 'cover',
+  backgroundSize: 'cover', // Mantiene la imagen cubriendo todo el contenedor
   backgroundPosition: 'center',
-}
+  backgroundRepeat: 'no-repeat',
+};
 
 const info = `
   Optimizar la operación de tus vehículos analizando el volumen de uso y el tiempo de operación.
   Mi Energía MX establece criterios claros con los operadores 
   para mejorar las prácticas de carga y reducir el Costo Total de Propiedad (TCO).`;
-
 ---
+<div class="flex justify-center my-8 px-4 md:px-12 lg:px-24">
+  <!-- Ancho máximo aumentado y altura más grande para una imagen más amplia y completa -->
+  <div class="relative w-full max-w-screen-xl h-[50rem] bg-gray-100 rounded-lg overflow-hidden">
+    <!-- Imagen de fondo -->
+    <div style={backgroundImage} class="absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover"></div>
 
-<div class="grid grid-cols-2">
-
-  <div class="h-full p-6 flex flex-col justify-center bg-gray-600 text-white">
-    <p class="text-2xl font-semibold">Hasta el 90% del consumo de energía eléctrica de un CEDIS puede provenir de su sala de carga.</p>
-    <p>{info}</p>
+    <!-- Contenedor del texto alineado a la derecha -->
+    <div class="relative h-full flex items-center justify-end p-6 md:p-8 lg:p-10">
+      <div class="bg-gray-800 bg-opacity-75 text-white p-6 md:p-8 lg:p-10 rounded-lg max-w-md">
+        <p class="text-xl md:text-4xl font-semibold leading-tight">
+          Hasta el 90% del consumo de energía eléctrica de un CEDIS puede provenir de su sala de carga.
+        </p>
+        <p class="mt-4 text-sm md:text-base lg:text-lg">{info}</p>
+      </div>
+    </div>
   </div>
-
-  <div style={backgroundImage} class="h-96"/>
-
 </div>

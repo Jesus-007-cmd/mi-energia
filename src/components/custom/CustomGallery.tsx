@@ -2,10 +2,10 @@
 import { useEffect, useRef } from 'react';
 
 type Props = {
-  photos:string[];
+  photos: string[];
 }
 
-export default function CustomGallery (props:Props) {
+export default function CustomGallery(props: Props) {
 
   // Props
   const { photos } = props;
@@ -14,52 +14,62 @@ export default function CustomGallery (props:Props) {
   const carouselRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-
-  function scrollLeft () {
+  // Función para desplazarse a la izquierda
+  function scrollLeft() {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left:-scrollAmount, behavior: 'smooth' });
+      carouselRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       assignInterval();
     }
   }
 
-  function scrollRight () {
+  // Función para desplazarse a la derecha
+  function scrollRight() {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left:scrollAmount, behavior: 'smooth' });
+      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       assignInterval();
     }
   }
 
-  function assignInterval () {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(validateCanScroll, 5000);
+  // Asignar intervalo para desplazamiento automático
+  function assignInterval() {
+    if (intervalRef.current) clearInterval(intervalRef.current); // Limpiar intervalo previo
+    intervalRef.current = setInterval(validateCanScroll, 5000); // Iniciar intervalo para mover cada 5 segundos
   }
 
-  function validateCanScroll () {
+  // Función para validar si el carrusel debe reiniciar o continuar
+  function validateCanScroll() {
     if (carouselRef.current) {
       const { scrollWidth, clientWidth, scrollLeft } = carouselRef.current;
       if (clientWidth + scrollLeft === scrollWidth) {
-        carouselRef.current.scrollTo({ left:0, behavior: 'smooth' });
+        carouselRef.current.scrollTo({ left: 0, behavior: 'smooth' }); // Regresar al inicio
       } else {
-        scrollRight();
+        scrollRight(); // Desplazar a la derecha
       }
     }
   }
 
+  // Hook de efecto para activar el intervalo al cargar el componente
   useEffect(() => {
     assignInterval();
-    return () => clearInterval(intervalRef.current!);
+    return () => clearInterval(intervalRef.current!); // Limpiar el intervalo cuando el componente se desmonte
   }, []);
 
   return (
+    <div className="bg-gray-200 overflow-auto py-8 px-4 md:px-12 lg:px-24">
+      {/* Título para la galería */}
+      <h2 className="text-3xl font-semibold text-center mb-6">Galería de Proyectos</h2>
 
-    <div className='bg-gray-200 overflow-auto flex flex-col justify-center' ref={carouselRef}>
-
-      <div className='flex'>
-        {photos.map((img) => <img src={img} alt='gallery' className='h-[50vh]'/>)}
+      {/* Contenedor de imágenes */}
+      <div className="flex gap-6 overflow-x-auto" ref={carouselRef}>
+        {photos.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt="gallery"
+            className="h-[50vh] object-cover rounded-lg shadow-md"
+          />
+        ))}
       </div>
-
     </div>
-
-  )
-
+  );
 }

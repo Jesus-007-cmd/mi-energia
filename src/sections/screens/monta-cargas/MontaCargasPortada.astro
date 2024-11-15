@@ -2,10 +2,19 @@
 
 const backgroundStyle = {
   backgroundImage: 'url(/images/screens/monta-cargas/img1.jpg)',
-  backgroundSize: 'cover',
+  backgroundSize: 'cover', /* Asegura que la imagen cubra todo el contenedor */
   backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
 }
 
 ---
 
-<div style={backgroundStyle} class="h-screen bg-red-100">
+<div style={backgroundStyle} class="w-full h-screen bg-red-100 flex items-center justify-center relative">
+  <!-- Texto en un contenedor semi-transparente solo para pantallas pequeñas -->
+  <div class="absolute bottom-4 left-4 right-4 text-white bg-gray-900 bg-opacity-80 p-4 rounded-lg md:hidden">
+    <p class="text-lg font-semibold">
+      Incrementa tu <span class="font-bold">productividad</span>, ahorra <span class="font-bold">energía</span> y mejora continuamente tu <span class="font-bold">operación</span> diaria con nuestra solución de Carga Inteligente RI para baterías de vehículos de logística industrial.
+    </p>
+  </div>
+</div>
+

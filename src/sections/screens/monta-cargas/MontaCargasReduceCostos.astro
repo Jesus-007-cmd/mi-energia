@@ -1,19 +1,25 @@
 ---
-
 const backgroundImage = {
   backgroundImage: 'url(/images/screens/monta-cargas/img3.jpg)',
-  backgroundSize: 'cover',
+  backgroundSize: 'cover', // Esto asegura que la imagen cubra todo el contenedor
   backgroundPosition: 'center',
-}
-
+  backgroundRepeat: 'no-repeat',
+};
 ---
 
-<div class="grid grid-cols-2">
-  
-  <div class="h-96" style={backgroundImage}/>
+<div class="flex justify-center my-8 px-4 md:px-12 lg:px-24">
+  <!-- Contenedor principal con ancho máximo -->
+  <div class="relative w-full max-w-screen-xl h-[45rem] bg-gray-100 rounded-lg overflow-hidden flex">
 
-  <div class="flex items-center justify-end text-right p-6 bg-gray-600">
-    <p class="text-white text-2xl font-semibold">El análisis energético reduce los costos operativos de tu flota de montacargas</p>
+    <!-- Contenedor del texto ocupando 2/5 del ancho -->
+    <div class="flex items-center justify-center bg-gray-800 bg-opacity-90 text-white w-2/5 p-10">
+      <p class="text-xl md:text-4xl font-semibold leading-tight text-center">
+        El análisis energético reduce los costos operativos de tu flota de montacargas
+      </p>
+    </div>
+
+    <!-- Imagen de fondo ocupando 3/5 del ancho y expandida en altura -->
+    <div style={backgroundImage} class="w-3/5 h-full bg-center bg-no-repeat rounded-r-lg"></div>
+    
   </div>
-
 </div>

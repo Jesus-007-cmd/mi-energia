@@ -1,0 +1,32 @@
+---
+// Modules
+import { YouTube } from 'astro-embed';
+
+// Components
+import Layout from "../layouts/Layout.astro";
+import EnergiaRenovable from '../sections/screens/mi-energia/EnergiaRenovable.astro';
+import SuministroEnergiaRespaldo from '../sections/screens/mi-energia/SuministroEnergiaRespaldo.astro';
+import FuncionInstalacionFotovoltaica from '../sections/screens/mi-energia/FuncionInstalacionFotovoltaica.astro';
+import VentajasVistazo from '../sections/screens/mi-energia/VentajasVistazo.astro';
+---
+
+<Layout title="Sistema Fotovoltaico Residenciales Híbridos">
+  <h1 class="text-3xl font-bold text-center mt-10">Sistema Fotovoltaico Residenciales Híbridos</h1>
+  
+  <section style="padding-top: 20px;">
+    <h2 class="text-2xl font-semibold text-center mt-6">Energía 100% renovable para su casa</h2>
+    <EnergiaRenovable/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">Suministro de energía de respaldo en caso de apagón</h2>
+    <SuministroEnergiaRespaldo/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">¿Cómo funciona una instalación fotovoltaica?</h2>
+    <FuncionInstalacionFotovoltaica/>
+
+    <h2 class="text-2xl font-semibold text-center mt-6">Ventajas de un sistema fotovoltaico</h2>
+    <VentajasVistazo/>
+  </section>
+</Layout>
+
+
+
