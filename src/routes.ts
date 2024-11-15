@@ -4,10 +4,19 @@ export default class AppRoutes {
     route:'/mi-energia#sistema-fotovoltaico-comercial-industrial',
     title:'Sistema Fotovoltaico Comercial e Industrial'
   }
-
-  static sistemaFotovoltaicoResidencialEHibrido:AppRoute = {
+/*
+  static sistemaFotovoltaicoResidencialEHibridoRoute:AppRoute = {
     route:'/mi-energia#sistema-fotovoltaico-residencial-hibrido',
     title:'Sistema Fotovoltaico Residencial e Híbrido'
+  }*/
+  static sistemaFotovoltaicoComercialEIndustrial: AppRoute = {
+    route: '/mi-energia-comercial', // Asegúrate de definir la ruta completa
+    title: 'Sistema Fotovoltaico Comercial e Industrial'
+  }
+
+  static sistemaFotovoltaicoResidencialEHibrido: AppRoute = {
+    route: '/mi-energia-residencial ', // Asegúrate de definir la ruta completa
+    title: 'Sistema Fotovoltaico Residencial e Híbrido'
   }
 
   static montaCargas:AppRoute = {

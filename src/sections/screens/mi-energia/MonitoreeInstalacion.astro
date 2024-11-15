@@ -6,32 +6,35 @@ const monitoreeSuInstalacionList = [
   '• Exponga a los derrochadores de energía',
   '• Analice y optimice el consumo de energía',
   '• Mantenga la instalación actualizada',
+  '• Ahorre dinero con extensiones individuales',
+  '• Extienda la garantía sin cargo',
 ];
 
 ---
 
-<section class="bg-neutral-800 text-white text-center flex flex-col gap-4 p-6 md:pb-14 md:px-20 lg:px-40 xl:px-60">
+<section class="bg-neutral-800 text-white text-center flex flex-col gap-4 p-6 md:py-10 md:px-20 lg:px-40 xl:px-60">
 
   <h3 class="text-2xl font-semibold text-center">Monitoree su instalación fotovoltaica en todo momento</h3>
 
   <div class="gap-6 grid grid-cols-1 md:grid-cols-2">
 
-    <p class="bg-neutral-700 border rounded p-4 flex flex-col justify-center">
-      Con la herramienta de monitoreo gratuita Fronius Solar.web, puede supervisar el consumo 
-      y rendimiento energético en todo momento y aprovechar al máximo su instalación fotovoltaica.
-    </p>
+    <div class="bg-neutral-700 border rounded p-4 flex flex-col justify-center">
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      
-      {monitoreeSuInstalacionList.map((item, key) => 
-        <li class="bg-neutral-700 p-4 rounded flex items-center justify-center" class:list={key === 4 ? 'md:col-span-2' : ''}>
-          <span>{item}</span>
-        </li>
-      )}
+      <p>
+        Con la herramienta de monitoreo gratuita Fronius Solar.web, puede supervisar el consumo 
+        y rendimiento energético en todo momento y aprovechar al máximo su instalación fotovoltaica.
+      </p>
+
+    </div>
+
+    <ul class="bg-neutral-700 flex flex-col justify-center border rounded p-4 lg:order-3">
+      {monitoreeSuInstalacionList.map((item) => <li>{item}</li>)}
     </ul>
 
-    <div class="border rounded py-6 bg-white flex items-center justify-center md:col-span-2">
+    <div class="border rounded row-span-2 flex items-center justify-center bg-white col-span-2 lg:col-span-1">
+
       <img src="/images/screens/fronius/img10.jpeg">
+
     </div>
 
   </div>

@@ -1,25 +1,25 @@
 ---
 
 const bajaTusCostosList = [
-  'Un proyecto fotovoltaico con Mi Energía MX, reduce los costos de energía al aprovechar un abundante recurso con el que su empresa ya cuenta la radicación solar.',
+  'Un proyecto fotovoltaico con Mi Energía MX baja los costos de energía al aprovechar un abundante recurso con el que su empresa ya cuenta: la radiación solar.',
   'Contacte a nuestra unidad de proyectos para evaluar exactamente cuánto dinero vale la radiación solar que cae diariamente sobre su techo.',
   'No tener un sistema fotovoltaico hoy en día es desperdiciar un valioso recurso que su empresa ya tiene y desaprovechar una gran oportunidad.',
 ];
 
 ---
 
-<section class="bg-neutral-800 text-white text-center flex flex-col gap-4 p-6 md:pb-14 md:px-20 lg:px-40 xl:px-60">
+<section class="bg-neutral-800 text-white text-center flex flex-col gap-4 p-6 md:py-10 md:px-20 lg:px-40 xl:px-60">
 
-  <h3 class="text-2xl font-semibold">Reduce tus costos</h3>
+  <h3 class="text-2xl font-semibold">Baja tus costos</h3>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
     {bajaTusCostosList.map((row, index) =>
 
       <div class="border rounded flex flex-col items-center justify-center p-4 gap-2 bg-neutral-700">
 
         <div class="min-h-10 min-w-10 border rounded flex items-center justify-center bg-neutral-800">
-          <span class="text-yellow-500 font-semibold">{index + 1}</span>
+          <span class="text-yellow-500 font-medium">{index + 1}</span>
         </div>
 
         <p>{row}</p>

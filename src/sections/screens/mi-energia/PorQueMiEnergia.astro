@@ -1,0 +1,57 @@
+---
+
+const whyFronius = [
+	{
+		title: "Experiencia de calidad",
+		description: `
+			Con más de 30 años de experiencia en instalación de sistemas fotovoltaicos, 
+      con equipos de alta calidad. Confía en nuestros aspectos para diseñar un 
+      sistema fotovoltaico adaptado a tus necesidades.
+		`,
+	},
+	{
+		title: "Rentabilidad garantizada",
+		description: `
+			En Mi Energía MX tu empresa invierte en un sistema cuyo costo siempre 
+      será menor al valor de la energía que produce, asegurando un retorno de 
+      inversión óptimo. Ahorra costos de electricidad, aprovecha tu recurso solar.
+    `,
+	},
+	{
+		title: "Servicio excepcional",
+		description: `
+			Con Mi Energía MX, obtendrás un monitoreo remoto constante, 
+      nuestros tiempos de respuesta en caso de fallas son inigualables, 
+      garantizando el funcionamiento continuo de tu sistema fotovoltaico.
+		`,
+	},
+];
+
+---
+
+<section class="bg-neutral-100 p-6 md:py-10 md:px-20 lg:px-40 xl:px-60 flex flex-col gap-4 text-center">
+
+  <h3 class="text-2xl font-semibold">¿Por qué elegir Mi Energía MX?</h3>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    {whyFronius.map((row, index) => 
+
+      <div class="text-center p-6 gap-4 flex flex-col items-center bg-white border rounded">
+
+        <div class="border h-12 w-12 flex justify-center items-center rounded bg-gray-100">
+          <span class="text-blue-700 font-medium text-lg">{index+1}</span>
+        </div>
+
+        <div>
+          <p class="text-lg font-medium">{row.title}</p>
+          <p>{row.description}</p>
+        </div>
+
+      </div>
+  
+    )}
+
+  </div>
+
+</section>

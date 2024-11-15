@@ -122,9 +122,13 @@ export default function Topbar (props:Props) {
 function ServicesOptions () {
 
   const servicesList = [
-    { 
-      label:AppRoutes.sistemaFotovoltaicoComercialEIndustrialRoute.title,
+   /*  { 
+      label:"simon",
       url:AppRoutes.sistemaFotovoltaicoComercialEIndustrialRoute.route 
+    },*/
+    { 
+      label:AppRoutes.sistemaFotovoltaicoComercialEIndustrial.title,
+      url:AppRoutes.sistemaFotovoltaicoComercialEIndustrial.route 
     },
     { 
       label:AppRoutes.sistemaFotovoltaicoResidencialEHibrido.title,

@@ -1,28 +1,176 @@
----
-const backgroundImage = {
-  backgroundImage: 'url(/images/screens/monta-cargas/img2.jpg)',
-  backgroundSize: 'container',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-};
+<div class="carousel-container mx-4 md:mx-20 lg:mx-40">
 
-const info = `
-  Optimizar la operación de tus vehículos analizando el volumen de uso y el tiempo de operación.
-  Mi Energía MX establece criterios claros con los operadores 
-  para mejorar las prácticas de carga y reducir el Costo Total de Propiedad (TCO).`;
----
+  <!-- Encabezado del carrusel -->
+<div class="carousel-header bg-white text-black text-center p-4 md:pb-2 px-0 flex flex-col ">
+    <h3 class="font-semibold text-xl mb-2"> <!-- Aquí se eliminó el mt-20 -->
+      Conviértete en un punto de recarga para los conductores de autos eléctricos y genera ingresos adicionales
+    </h3>
+    <p class="mb-2 text-base">
+      Con nuestros cargadores comerciales ofrecemos un servicio de calidad y rapidez para los conductores de autos eléctricos.
+      Con esto generas un mayor flujo de personas a tu establecimiento y tendrás la oportunidad de generar ingresos a través de
+      las plataformas de cobro.
+    </p>
+</div>
 
-<div class="flex justify-center my-8 mt-16 md:mt-20 lg:mt-24">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 rounded-lg overflow-hidden w-full max-w-screen-lg mx-4 md:mx-12 lg:mx-24">
-    <!-- Imagen de Fondo -->
-    <div style={backgroundImage} class="rounded-lg h-64 md:h-full"></div>
-    
-    <!-- Contenedor de Texto -->
-    <div class="flex flex-col justify-center bg-gray-600 text-white p-6 md:p-8 rounded-lg">
-      <p class="text-2xl font-semibold leading-tight mb-4">
-        Hasta el 90% del consumo de energía eléctrica de un CEDIS puede provenir de su sala de carga.
-      </p>
-      <p class="text-base leading-relaxed">{info}</p>
+  <!-- Imagen principal del carrusel -->
+  <div class="carousel">
+    <input type="radio" name="carousel" id="carousel-1" checked>
+    <input type="radio" name="carousel" id="carousel-2">
+    <input type="radio" name="carousel" id="carousel-3">
+    <input type="radio" name="carousel" id="carousel-4">
+    <input type="radio" name="carousel" id="carousel-5">
+    <input type="radio" name="carousel" id="carousel-6">
+    <div class="slides">
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img17.png');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img18.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img19.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img20.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img21.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/screens/electromovilidad/img22.jpg');"></div>
     </div>
+
+  </div>
+
+  <!-- Texto alineado debajo de la imagen principal -->
+  <div class="carousel-text flex flex-col md:flex-row items-start text-center text-xs md:text-sm space-y-4 md:space-y-0 md:space-x-4 px-4 mt-0">
+  <label for="carousel-1" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Educación</h3>
+    <p class="text-xs md:text-sm">Fomentar la sostenibilidad adaptando en los campus cargadores de vehículos eléctricos para estudiantes, personal y visitantes.</p>
+      </label>
+    <label for="carousel-2" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Flotillas</h3>
+    <p class="text-xs md:text-sm">Ofrecemos monitoreo avanzado de flotillas para que su empresa pueda centrarse en la disponibilidad y confiabilidad de sus estaciones de carga y flota.</p>
+    </label>
+    <label for="carousel-3" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Centros Comerciales</h3>
+    <p class="text-xs md:text-sm">La instalación de puntos de recarga para vehículos eléctricos, puede llegar hacer una toma de decisión para el cliente a la hora de elegir dónde ir a comer.</p>
+    </label>
+    <label for="carousel-4" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Restaurantes</h3>
+    <p class="text-xs md:text-sm">La instalación de puntos de recarga para vehículos eléctricos, puede llegar hacer una toma de decisión para el cliente a la hora de elegir dónde ir a comer.</p>
+    </label>
+    <label for="carousel-5" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Hoteles</h3>
+    <p class="text-xs md:text-sm">Al incorporar estaciones de carga para vehículos eléctricos, no solo mejora la experiencia del huésped, sino también posiciona al hotel como un establecimiento moderno y sostenible.</p>
+    </label>
+    <label for="carousel-6" class="text-item w-full md:w-auto text-xs md:text-sm">
+    <hr class="mb-1">
+    <h3 class="text-xs md:text-base font-semibold">Casa Club Desarrollo Inmobiliario</h3>
+    <p class="text-xs md:text-sm">Posicione su casa club como el más centrado en los residentes de la ciudad ofreciendo a residentes e invitados estaciones de carga para vehículos eléctricos.</p>
+    </label>
   </div>
 </div>
+<style>
+.carousel-header {
+  background-color: white;
+  color: black;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.carousel-container {
+  text-align: center;
+  width: 100%;
+  max-width: 68%;
+  margin: auto;
+  z-index: 1; 
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* Animación de carrusel */
+@keyframes carousel {
+  0% { opacity: 1; }
+  16.66% { opacity: 1; }
+  33.32% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slide:nth-child(1) { animation: carousel 36s infinite; }
+.slide:nth-child(2) { animation: carousel 36s infinite 6s; }
+.slide:nth-child(3) { animation: carousel 36s infinite 12s; }
+.slide:nth-child(4) { animation: carousel 36s infinite 18s; }
+.slide:nth-child(5) { animation: carousel 36s infinite 24s; }
+.slide:nth-child(6) { animation: carousel 36s infinite 30s; }
+
+.carousel-text {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 5px;
+}
+
+/* Animación de cambio de color sin desvanecimiento */
+@keyframes color-change {
+  0%, 16.66% { color: lightgray; }
+  16.66%, 33.33% { color: black; }
+  33.33%, 100% { color: lightgray; }
+}
+
+.text-item {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  color: lightgray;
+  animation: color-change 36s infinite;
+}
+
+.text-item h3,
+.text-item hr,
+.text-item p {
+  color: inherit;
+  border-color: inherit;
+}
+
+.text-item:nth-child(1) { animation-delay: 0s; }
+.text-item:nth-child(2) { animation-delay: 6s; }
+.text-item:nth-child(3) { animation-delay: 12s; }
+.text-item:nth-child(4) { animation-delay: 18s; }
+.text-item:nth-child(5) { animation-delay: 24s; }
+.text-item:nth-child(6) { animation-delay: 30s; }
+
+.text-item h3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.text-item p {
+  font-size: 0.85em;
+}
+</style>

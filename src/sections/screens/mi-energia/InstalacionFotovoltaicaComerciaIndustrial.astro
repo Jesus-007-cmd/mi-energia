@@ -11,13 +11,13 @@ const items = [
   },
   {
     title:'Fronius Smart Meter',
-    description:'Para poder realizar un uso óptimo de la energía autogenerada, es importante poder leer todos los flujos de energía. Eso es precisamente de lo que se encarga el Fronius Smart Meter: para analizar y gestionar la energía de forma razonable y así aumentar el autoconsumo.'
+    description:'Para poder realizar un uso óptimo de la energía autogenerada, es importante poder leer todos los flujos de energía. Eso es precisamente de lo que se encarga el Fronius Smart Meter: detecta los gráficos de carga y, con estos, sienta la base para gestionar la energía de forma razonable y así aumentar el autoconsumo.'
   }
 ];
 
 ---
 
-<div class='flex flex-col items-center gap-6 p-6 md:pb-20 md:px-20 lg:px-40 xl:px-60 bg-gray-600'>
+<div class='flex flex-col items-center gap-6 p-6 md:py-10 md:px-20 lg:px-40 xl:px-60 bg-gray-600'>
 
   <h2 class="text-2xl font-semibold text-white">Así Funciona una Instalación Fotovoltaica Comercial e Industrial.</h2>
 
@@ -35,13 +35,13 @@ const items = [
 
           <div class='bg-gray-500 flex flex-col gap-2 items-center justify-start text-center p-6 border rounded text-white'>
 
-            <div class="min-h-10 min-w-10 border rounded flex items-center justify-center bg-blue-300">
-              <span class="font-semibold text-blue-700">{index+1}</span>
+            <div class="min-h-10 min-w-10 border rounded flex items-center justify-center">
+              <span class="text-lg font-medium text-yellow-400">{index+1}</span>
             </div>
 
             <div>
-              <h3 class="font-semibold">{row.title}</h3>
-              <p>{row.description}</p>
+              <h3 class="text-xl font-medium">{row.title}</h3>
+              <p class="text-lg">{row.description}</p>
             </div>
 
           </div>

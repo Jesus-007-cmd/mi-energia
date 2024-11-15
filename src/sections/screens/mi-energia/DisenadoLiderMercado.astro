@@ -1,66 +1,40 @@
----
+<section class="bg-neutral-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center gap-6 p-6 md:px-20 lg:px-40" id="disenado-lider-mercado-section">
 
-const bgImageStyle = {
-  backgroundImage: "url('/images/screens/fronius/img5.jpg')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-}
+  <!-- Imagen, se coloca al principio en pantallas pequeñas y medianas -->
+  <div class="flex justify-center mb-6 md:mb-0">
+    <img src="/images/screens/fronius/img5.jpg" class="h-64 md:h-[400px] w-full object-cover rounded-md shadow-md">
+  </div>
 
----
+  <!-- Contenedor de la tabla de beneficios -->
+  <div class="flex flex-col justify-center gap-4">
+    <h3 class="text-lg font-semibold mb-2">Beneficios</h3>
 
-<section 
-  class="bg-neutral-100 grid grid-cols-1 xl:grid-cols-2" 
-  id="sistema-fotovoltaico-comercial-industrial"
->
-
-  <div class="flex flex-col h-96 xl:h-auto" style={bgImageStyle}/>
-
-  <div class="flex flex-col justify-center gap-4 p-6 md:p-12">
-
-    <div>
-      <h3 class="text-sm">Beneficios</h3>
-      <h3 class="text-2xl font-semibold">Diseñado por el líder del mercado fotovoltaico</h3>
-    </div>
-
-    <table class="border bg-white border-collapse">
-
+    <table class="border bg-white border-collapse w-full">
       <tbody>
-        
         <tr>
-          <td class="p-3 border text-red-600 font-medium">
-            Justo a su medida
-          </td>
+          <td class="p-3 border text-red-600 font-medium">Justo a su medida</td>
           <td class="p-3 border">
             Dimensionamos nuestro sistema mediante un análisis exhaustivo de sus necesidades energéticas, 
             instalaciones e historial de pagos electrónicos para asegurar ahorros óptimos.
           </td>
         </tr>
-
         <tr>
-          <td class="p-3 border text-red-600 font-medium">
-            Operación y mantenimiento
-          </td>
+          <td class="p-3 border text-red-600 font-medium">Operación y mantenimiento</td>
           <td class="p-3 border">
-            Optimiza tu empresa con nuestro servicio de operación y mantenimiento. 
+            Optimiza tu empresa con nuestro paquete de operación y mantenimiento. 
             Nos encargamos del funcionamiento mientras generas ahorros con energía solar.
           </td>
         </tr>
-
         <tr>
-          <td class="p-3 border text-red-600 font-medium">
-            Monitoreo 24h
-          </td>
+          <td class="p-3 border text-red-600 font-medium">Monitoreo 24h</td>
           <td class="p-3 border">
             Se realiza un monitoreo las 24 horas a través de Fronius Solar Web para asegurar 
             el funcionamiento óptimo del sistema. Sin preocupaciones por fallos, 
             con tiempos de respuesta excelentes.
           </td>
         </tr>
-
-      </thead>
-
+      </tbody>
     </table>
-
   </div>
 
 </section>
