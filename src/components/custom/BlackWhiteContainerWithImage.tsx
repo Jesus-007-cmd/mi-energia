@@ -11,7 +11,7 @@ type Props = {
   
   export default function BlackWhiteContainerWithImage(props: Props) {
 	return (
-		<section class="bg-gray-50 text-center flex flex-col gap-8 p-8 md:p-16 lg:px-40 xl:px-60 rounded-lg shadow-lg">
+		<section className="bg-gray-50 text-center flex flex-col gap-8 p-8 md:p-16 lg:px-40 xl:px-60 rounded-lg shadow-lg">
 		{(props.sectionRows || []).map((row, key) => {
 		  const imageStyle = {
 			backgroundImage: `url(${row.image})`,
