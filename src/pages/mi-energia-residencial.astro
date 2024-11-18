@@ -10,21 +10,22 @@ import FuncionInstalacionFotovoltaica from '../sections/screens/mi-energia/Funci
 import VentajasVistazo from '../sections/screens/mi-energia/VentajasVistazo.astro';
 ---
 
-<Layout title="Sistema Fotovoltaico Residenciales Híbridos">
-  <h1 class="text-3xl font-bold text-center mt-10">Sistema Fotovoltaico Residenciales Híbridos</h1>
+<Layout title="Sistema Fotovoltaico Residenciales Híbridos" hasBackground={true}>
+  <h1 class="text-3xl  mt-20 font-bold text-center mt-10">Sistema Fotovoltaico Residenciales Híbridos</h1>
   
   <section style="padding-top: 20px;">
-    <h2 class="text-2xl font-semibold text-center mt-6">Energía 100% renovable para su casa</h2>
-    <EnergiaRenovable/>
-
-    <h2 class="text-2xl font-semibold text-center mt-6">Suministro de energía de respaldo en caso de apagón</h2>
+    <div class="mt-6 mb-4">
+    <EnergiaRenovable/ class="mt-6 mb-4">
+    </div>
+    <div class="mt-6 mb-4">
     <SuministroEnergiaRespaldo/>
-
-    <h2 class="text-2xl font-semibold text-center mt-6">¿Cómo funciona una instalación fotovoltaica?</h2>
+    </div>
+    <div class="mt-6 mb-4">
     <FuncionInstalacionFotovoltaica/>
-
-    <h2 class="text-2xl font-semibold text-center mt-6">Ventajas de un sistema fotovoltaico</h2>
+    </div>
+    <div class="mt-6 mb-4">
     <VentajasVistazo/>
+    </div>
   </section>
 </Layout>
 

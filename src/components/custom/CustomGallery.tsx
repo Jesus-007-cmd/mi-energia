@@ -55,9 +55,10 @@ export default function CustomGallery(props: Props) {
   }, []);
 
   return (
-    <div className="bg-gray-200 overflow-auto py-8 px-4 md:px-12 lg:px-24">
+    
+      <div className="bg-gray-200 overflow-auto  gap-8 p-8 md:p-16 lg:px-40 xl:px-60 rounded-lg shadow-lg">
       {/* Título para la galería */}
-      <h2 className="text-3xl font-semibold text-center mb-6">Galería de Proyectos</h2>
+      <h2 className="text-3xl font-semibold text-center ">Galería de Proyectos</h2>
 
       {/* Contenedor de imágenes */}
       <div className="flex gap-6 overflow-x-auto" ref={carouselRef}>

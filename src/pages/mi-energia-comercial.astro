@@ -14,29 +14,38 @@ import ConfiaEnNuestraExperiencia from '../sections/screens/mi-energia/ConfiaEnN
 import SustentabilidadAmbiente from '../sections/screens/mi-energia/SustentabilidadAmbiente.astro';
 ---
 
-<Layout title="Sistema Fotovoltaico Comercial e Industrial">
-  <h1 class="text-3xl font-bold text-center mt-10">Sistema Fotovoltaico Comercial e Industrial</h1>
+<Layout title="Sistema Fotovoltaico Comercial e Industrial" hasBackground={true}>
+  <h1 class="text-3xl font-bold text-center mt-24 mb-4">Sistema Fotovoltaico Comercial e Industrial</h1>
   
+  <div class="mt-6 mb-4">
    <ConfiaEnNuestraExperiencia/>
+   </div>
   <section style="padding-top: 20px;">
     <h2 class="text-2xl font-semibold text-center mt-6 mb-4">Diseñado para el líder del mercado fotovoltaico</h2>
+    <div class="mt-6 mb-4">
     <DisenadoLiderMercado/>
-
-    <h2 class="text-2xl font-semibold text-center mt-6 mb-4">Baja tus costos</h2>
+    </div>
+    <div class="mt-6 mb-4">
     <BajaTusCostos/>
+    </div>
+    <div class="mt-6 mb-4">
+    <SustentabilidadAmbiente/>
+    </div>
 
-<SustentabilidadAmbiente/>
-
-    <h2 class="text-2xl font-semibold text-center mt-6 mb-4">Instalación Fotovoltaica Comercial e Industrial</h2>
+    <div class="mt-6 mb-4">
     <InstalacionFotovoltaicaComerciaIndustrial/>
+    </div>
 
-    <h2 class="text-2xl font-semibold text-center mt-6 mb-4">Monitoreo de Instalación</h2>
+    <div class="mt-6 mb-4">
     <MonitoreeInstalacion/>
+    </div>
 
-    <h2 class="text-2xl font-semibold text-center mt-6 mb-4">Inversor Robusto</h2>
+    <div class="mt-6 mb-4">
     <InversorRobusto/>
-
-    <h2 class="text-2xl font-semibold text-center mt-6 mb-4">Fronius 2024</h2>
+    </div>
+    
+    <div class="mt-6 mb-4">
     <Fronius2024/>
+    </div>
   </section>
 </Layout>

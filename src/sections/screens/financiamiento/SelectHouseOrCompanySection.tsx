@@ -42,8 +42,8 @@ export default function SelectHouseOrCompanySection () {
 
   return (
 
-    <section>
-
+    
+<section className=" text-center bg-gray-50 text-center flex flex-col gap-8 p-8 md:p-16 lg:px-40 xl:px-60 rounded-lg shadow-lg">
       <div className='h-screen p-6 flex items-end justify-center' style={currentBackground}>
 
         <div className="flex gap-4">

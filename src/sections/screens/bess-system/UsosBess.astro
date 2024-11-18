@@ -22,24 +22,26 @@ const usoBessList = [
 
 <section class="flex flex-col gap-6 p-6 md:px-20 lg:px-40 xl:px-60 bg-neutral-100">
 
-  <h3 class="text-2xl font-semibold">Usos de los BESS</h3>
+  <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">Usos de los BESS</h3>
 
   <div class="flex flex-col gap-6">
 
-    {usoBessList.map((row) => 
-
+    {usoBessList.map((row) => (
       <div class="flex flex-col lg:flex-row gap-6">
 
-        <div class="p-6 border rounded bg-white flex flex-col justify-center w-full">
-          <h3 class="font-semibold">{row.title}</h3>
-          <p>{row.description}</p>
+        <!-- Contenedor de texto con borde y sombra -->
+        <div class="p-6 bg-white border-2 border-gray-300 rounded-lg shadow-md w-full hover:scale-105 transition-all duration-300 ease-in-out">
+          <h3 class="font-semibold text-xl text-gray-800 mb-2">{row.title}</h3>
+          <p class="text-base text-gray-600">{row.description}</p>
         </div>
 
-        <img src={row.img} alt={row.title} class="w-full lg:w-96 rounded"/>
+        <!-- Imagen con efecto de agrandamiento y sombra -->
+        <div class="flex justify-center">
+          <img src={row.img} alt={row.title} class="w-full lg:w-96 rounded-md shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"/>
+        </div>
 
       </div>
-
-    )}
+    ))}
 
   </div>
 

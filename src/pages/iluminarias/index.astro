@@ -1,60 +1,59 @@
 ---
-// Components
 import Layout from "../../layouts/Layout.astro";
 import ButtonClass from "../../classes/ButtonClass";
 import CustomButton from "../../components/forms/CustomButton";
 
 const iluminaria1 = {
-  title:'PROYECTOR LED PARA GRANDES ALTURAS',
-  potencias:'150W a 1250W',
-  description:'Diseño con módulos para el compartimiento del driver y la fuente luminosa, gran tolerancia para altas potencias (150 - 1250W). Instalación sencilla y libre de mantenimiento, peso asegurando una disipación efectiva del calor.',
-  aplicaciones:['Estadios', 'Unidades Deportivas', 'Patios de Maniobras', 'Estacionamientos'],
-  caracteristicas:[
+  title: 'PROYECTOR LED PARA GRANDES ALTURAS',
+  potencias: '150W a 1250W',
+  description: 'Diseño con módulos para el compartimiento del driver y la fuente luminosa, gran tolerancia para altas potencias (150 - 1250W). Instalación sencilla y libre de mantenimiento, peso asegurando una disipación efectiva del calor.',
+  aplicaciones: ['Estadios', 'Unidades Deportivas', 'Patios de Maniobras', 'Estacionamientos'],
+  caracteristicas: [
     'Eficacia del sistema 145 lm/W.',
     'Driver multivoltaje con rango de apertura de 90 a 305 V. Sobre pedido 440 V y 480 V.',
     'Supresor de picos de 10 Kv.'
   ],
-  img:'/images/screens/iluminarias/img4.png'
+  img: '/images/screens/iluminarias/img4.png'
 }
 
 const iluminaria2 = {
-  title:'CAMPANA LED PARA NAVES INDUSTRIALES Y BODEGAS',
-  potencias:'100W, 150W y 200W',
-  description:'Una opción ideal para iluminar de manera eficiente y segura grandes espacios de trabajo. Esta lámpara cuenta con tecnología LED de alta potencia, lo que garantiza una iluminación brillante y uniforme.',
-  aplicaciones:['Naves industriales', 'Domos', 'Canchas', 'Plazas Cívicas Techadas'],
-  caracteristicas:[
-    'Eficacia real del sistema de 160 lm/W..',
-    'Driver multivoltaje con rango de apertura de 100 a 277 V..',
+  title: 'CAMPANA LED PARA NAVES INDUSTRIALES Y BODEGAS',
+  potencias: '100W, 150W y 200W',
+  description: 'Una opción ideal para iluminar de manera eficiente y segura grandes espacios de trabajo. Esta lámpara cuenta con tecnología LED de alta potencia, lo que garantiza una iluminación brillante y uniforme.',
+  aplicaciones: ['Naves industriales', 'Domos', 'Canchas', 'Plazas Cívicas Techadas'],
+  caracteristicas: [
+    'Eficacia real del sistema de 160 lm/W.',
+    'Driver multivoltaje con rango de apertura de 100 a 277 V.',
     'Supresor de picos en DRIVER BUILT-IN de 10 Kv.',
   ],
-  img:'/images/screens/iluminarias/img1.png'
+  img: '/images/screens/iluminarias/img1.png'
 }
 
 const iluminaria3 = {
-  title:'LUMINARIA LED PARA ALUMBRADO PÚBLICO',
-  potencias:'20W a 180W',
-  description:'Descripción: Diseño patentado, ultra-ligero, aerodinámico y con gran disipación de calor. Incorpora una carcasa de aluminio fundido, con protección general, que le brinda resistencia a ambientes altamente corrosivos y climas complejos. Ideal para vialidades, fraccionamientos, estacionamientos, parques, entre otros.',
-  aplicaciones:['Vialidades', 'Estacionamientos'],
+  title: 'LUMINARIA LED PARA ALUMBRADO PÚBLICO',
+  potencias: '20W a 180W',
+  description: 'Diseño patentado, ultra-ligero, aerodinámico y con gran disipación de calor. Incorpora una carcasa de aluminio fundido, con protección general, que le brinda resistencia a ambientes altamente corrosivos y climas complejos. Ideal para vialidades, fraccionamientos, estacionamientos, parques, entre otros.',
+  aplicaciones: ['Vialidades', 'Estacionamientos'],
   caracteristicas: [
     'Eficacia del sistema 140 a 160 lm/W.',
     'Supresor de picos de tensión de 10 Kv.',
     'Driver multivoltaje con rango de apertura de 90 a 305 V.',
     'Fotocelda tipo NEMA.',
   ],
-  img:'/images/screens/iluminarias/img2.png'
+  img: '/images/screens/iluminarias/img2.png'
 }
 
 const iluminaria4 = {
-  title:'LUMINARIA LED SOLAR PARA VIALIDADES “TODO EN UNO"',
-  potencias:'20W a 60W',
-  description:'La S6A es la luminaria solar perfecta que combina funcionalidad, precio, durabilidad, estética y desempeño. La batería cuenta con 7 días de respaldo para días nublados o lluviosos. Es ideal para vialidades, caminos rurales, fraccionamientos, parques, jardines, entre otros; sobre todo aquellos donde no llega la energía eléctrica.',
-  aplicaciones:['Vialidades', 'Fraccionamientos', 'Parques y Áreas Comunes'],
-  caracteristicas:[
+  title: 'LUMINARIA LED SOLAR PARA VIALIDADES “TODO EN UNO"',
+  potencias: '20W a 60W',
+  description: 'La S6A es la luminaria solar perfecta que combina funcionalidad, precio, durabilidad, estética y desempeño. La batería cuenta con 7 días de respaldo para días nublados o lluviosos. Ideal para vialidades, caminos rurales, fraccionamientos, parques, jardines, entre otros; donde no llega la energía eléctrica.',
+  aplicaciones: ['Vialidades', 'Fraccionamientos', 'Parques y Áreas Comunes'],
+  caracteristicas: [
     'Autonomía de 7 noches con días lluviosos o nublados con tan solo 6 horas de carga solar.',
     'Eficacia del LED 190 lm/W, eficacia del sistema 110 lm/W (Prueba 6,000 hrs - NOM-031-ENER-2019).',
     '16 años de vida útil de la batería.',
   ],
-  img:'/images/screens/iluminarias/img3.png'
+  img: '/images/screens/iluminarias/img3.png'
 }
 
 const iluminarias = [iluminaria1, iluminaria2, iluminaria3, iluminaria4];
@@ -69,7 +68,6 @@ const imageList = [
 ---
 
 <style>
-
   .first-image-background {
     background-image: url('/images/screens/iluminarias/img5.jpg');
     background-size: cover;
@@ -99,90 +97,64 @@ const imageList = [
     background-size: cover;
     background-position: center;
   }
-
 </style>
 
-<Layout title="Iluminiarias">
+<Layout title="Iluminarias" class="mt-24" hasBackground={true}>
 
-  <div class="h-screen bg-gray-700"/>
+ <section class="flex flex-col lg:grid lg:grid-cols-2 mt-8 mx-4 md:mx-20 lg:mx-40 xl:mx-60">
+  <!-- Text content with margin adjustments to prevent overlap with the menu -->
+  <div class="p-12 gap-1 flex flex-col justify-center">
+    <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+      Potentes proyectos de iluminación exterior profesional, duraderos y confiables con alta eficiencia energética.
+    </h3>
+    <p class="text-lg text-gray-600">
+      Nuestra gama de luminarias para alumbrado integran materiales altamente duraderos, lentes ópticos especializados para vialidades en general y supresor de sobretensiones; características que aseguran autosuficiencia y la máxima eficacia lumínica en el mercado.
+    </p>
+  </div>
 
-  <section class="flex flex-col lg:grid lg:grid-cols-2">
+  <!-- Background image with consistent height and margin bottom -->
+  <div class="fifth-image-background lg:h-96 mb-6 rounded-lg" />
+</section>
 
-    <div class="p-12 gap-1 flex flex-col justify-center">
+<section class="bg-neutral-700 text-center text-white mt-6 mx-4 md:mx-20 lg:mx-40 xl:mx-60 rounded-lg py-8">
+  <div class="p-6 md:px-20 lg:px-40 xl:px-60">
+    <h3 class="text-2xl font-semibold mb-4">
+      Ideales para vialidades, parques, jardines, túneles, aeropuertos, canchas deportivas, naves industriales, entre otros.
+    </h3>
+    <p class="mb-4">
+      Cumplimos con la certificación de todas las normas nacionales e internacionales y contamos con amplias garantías directamente de fábrica.
+    </p>
+  </div>
 
-      <h3 class="text-2xl font-semibold">
-        Potentes proyectos de iluminación exterior profesional, duraderos y confiables con alta eficiencia energética.
-      </h3>
-    
-      <p>
-        Nuestra gama de luminarias para alumbrado integran materiales altamente
-        duraderos, lentes ópticos especializados para vialidades en general y supresor de
-        sobretensiones; características que aseguran autosuficiencia y la máxima eficacia lumínica en el mercado.
-      </p>
+  <!-- Grid for product items with rounded corners and spacing between cards -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-4">
+    {iluminarias.map((row, index) => (
+      <div class={`px-6 py-8 flex flex-col gap-4 items-center ${index % 2 === 0 ? 'bg-neutral-800' : 'bg-neutral-900'} rounded-lg`}>
+        <h4 class="font-medium text-lg">{row.title}</h4>
+        <img src={row.img} alt={row.title} class="h-44 mx-auto mb-4" />
+        <a href={`/iluminarias/${index}`}>
+          <CustomButton buttonClass={ButtonClass.WhiteBorderButtonClass}>Ver Producto</CustomButton>
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
 
-    </div>
+<section class="text-center flex flex-col mt-8 mx-4 md:mx-20 lg:mx-40 xl:mx-60">
+  <div class="flex flex-col gap-1 p-6 md:px-20 lg:px-40 xl:px-60 mb-6">
+    <h3 class="text-2xl font-semibold">Realizamos proyectos personalizados para cada aplicación, garantizando óptimos resultados.</h3>
+    <p>
+      Nuestra Área de Proyectos se especializa en estudios y diagnósticos energéticos de ahorro de energía en el sistema de iluminación, cumpliendo los niveles de luminosidad recomendados por la Secretaría Del Trabajo y Previsión Social.
+    </p>
+  </div>
 
-    <div class="fifth-image-background lg:h-96"/>
+  <!-- Image grid with 75vh height for each image, margin between images -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    {imageList.map((row) => (
+      <div class={`h-[75vh] ${row} mb-4 rounded-lg overflow-hidden`} />
+    ))}
+  </div>
+</section>
 
-  </section>
-
-  <section class="bg-neutral-700 text-center text-white">
-
-    <div class="p-6 md:px-20 lg:px-40 xl:px-60">
-
-      <h3 class="text-2xl font-semibold">
-        Ideales para vialidades, parques, jardines, túneles, aeropuertos, canchas deportivas, naves industriales, entre otros.
-      </h3>
-  
-      <p>
-        Cumplimos con la certificación de todas las normas nacionales e internacionales y contamos con amplias garantías directamente de fábrica.
-      </p>
-
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-4">
-
-      {iluminarias.map((row, index) => 
-
-        <div class={`px-6 py-20 flex flex-col gap-12 items-center ${index % 2 === 0 ? 'bg-neutral-800' : 'bg-neutral-900'}`}>
-
-          <h4 class="font-medium">{row.title}</h4>
-
-          <img src={row.img} alt={row.title} class="h-44 mx-auto"/>
-
-          <a href={`/iluminarias/${index}`}>
-            <CustomButton buttonClass={ButtonClass.WhiteBorderButtonClass}>Ver Producto</CustomButton>
-          </a>
-
-        </div>
-
-      )}
-
-    </div>
-
-  </section>
-
-  <section class="text-center flex flex-col">
-
-    <div class="flex flex-col gap-1 p-6 md:px-20 lg:px-40 xl:px-60">
-
-      <h3 class="text-2xl font-semibold">
-        Realizamos proyectos personalizados para cada aplicación, garantizando óptimos resultados.
-      </h3>
-  
-      <p>
-        Nuestra Área de Proyectos se especializa en estudios y diagnósticos energéticos de ahorro de energía en el sistema de iluminación, 
-        cumpliendo los niveles de luminosidad recomendados por la Secretaría Del Trabajo y Previsión Social.
-      </p>
-
-    </div>
-
-    <div class="grid grid-cols-4">
-
-      {imageList.map((row) => <div class={`h-[75vh] ${row}`} />)}
-
-    </div>
-
-  </section>
 
 </Layout>

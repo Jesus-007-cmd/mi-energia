@@ -1,8 +1,6 @@
 ---
-// Components
 import Layout from "../layouts/Layout.astro";
 
-// Sections
 import CargadorMQ200 from '../sections/screens/electromovilidad/CargadorMQ200.astro';
 import AdoptaEstacionCarga from '../sections/screens/electromovilidad/AdoptaEstacionCarga.astro';
 import ElectrificaTuFlotilla from '../sections/screens/electromovilidad/ElectrificaTuFlotilla.astro';
@@ -14,31 +12,47 @@ import SerAnfitrionEstacionCargo from '../sections/screens/electromovilidad/SerA
 ---
 
 <Layout title="Electromovilidad" hasBackground={true}>
+  <!-- Barra de fondo para el menú -->
 
-  <!-- Título principal de la página con fondo gris oscuro y mayor margen superior -->
-  <section class="bg-gray-800 text-white py-16 px-6 md:px-20 lg:px-40 text-center mt-16">
-    <h1 class="text-4xl font-bold mb-4">Electromovilidad</h1>
-    <p class="text-lg md:text-xl max-w-2xl mx-auto">
-      Conduce hacia un futuro sostenible. Descubre cómo la tecnología de Mi Energía MX puede ayudarte a transformar tu empresa con soluciones innovadoras de carga y movilidad eléctrica.
-    </p>
-  </section>
+  <!-- Título principal de la página -->
+  <section class="bg-gray-800 text-white py-6 md:px-20 lg:px-40 xl:px-60 text-center mt-14 mb-4">
+  <h1 class="text-4xl font-bold mb-4 mt-4">Electromovilidad</h1>
+  <p class="text-lg md:text-2xl mx-auto">
+    Conduce hacia un futuro sostenible. Descubre cómo la tecnología de Mi Energía MX puede ayudarte a transformar tu empresa con soluciones innovadoras de carga y movilidad eléctrica.
+  </p>
+</section>
+
 
   <!-- Contenido de la página -->
-  <div class="mt-10"> <!-- Mayor margen superior -->
+  <div class="space-y-12">
+    <div class="mt-6 mb-4">
     <SerAnfitrionEstacionCargo/>
+    </div>
+    <div class="mt-6 mb-4">
     <ConvertirFlotaEmpresarial/>
+    </div>
+    <div class="mt-6 mb-4">
     <MovilidadElectricaCamino/>
+    </div>
+    <div class="mt-6 mb-4">
     <AdoptaEstacionCarga/>
+    </div>
+    <div class="mt-6 mb-4">
     <VentajasElectromovilidad/>
+    </div>
+    <div class="mt-6 mb-4">
     <ElectrificaTuFlotilla/>
+    </div>
+    <div class="mt-6 mb-4">
     <CargadorMQ200/>
+    </div>
   </div>
 
-  <!-- Sección final con los mismos estilos que CargadorMQ200 -->
-  <section class="bg-gray-700 text-white p-6 md:pb-12 md:px-20 lg:px-60 flex flex-col gap-6 mt-16">
-    <div class="items-center grid grid-cols-1 lg:grid-cols-2">
-      <div class="flex flex-col justify-center">
-        <p class="font-medium text-lg md:text-xl text-center max-w-md mx-auto mb-4">
+  <!-- Sección final con imagen y texto -->
+  <section class="bg-gray-700 text-white p-6 md:pb-12 md:px-20 lg:px-60 flex flex-col gap-8 mt-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div class="flex flex-col justify-center text-center lg:text-left">
+        <p class="font-medium text-lg md:text-xl mb-4">
           Transforma tu empresa y recarga tus vehículos eléctricos con nuestra tecnología de punta. Da el siguiente paso hacia el futuro de la movilidad eléctrica con Mi Energía MX.
         </p>
       </div>
@@ -47,5 +61,4 @@ import SerAnfitrionEstacionCargo from '../sections/screens/electromovilidad/SerA
       </div>
     </div>
   </section>
-
 </Layout>

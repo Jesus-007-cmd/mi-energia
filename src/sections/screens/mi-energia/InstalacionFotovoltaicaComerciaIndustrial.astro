@@ -17,39 +17,36 @@ const items = [
 
 ---
 
-<div class='flex flex-col items-center gap-6 p-6 md:py-10 md:px-20 lg:px-40 xl:px-60 bg-gray-600'>
+<div class="flex flex-col items-center gap-6 p-6 md:py-10 md:px-20 lg:px-40 xl:px-60 bg-gray-600">
 
-  <h2 class="text-2xl font-semibold text-white">Así Funciona una Instalación Fotovoltaica Comercial e Industrial.</h2>
+  <!-- Título -->
+  <h2 class="text-2xl font-semibold text-white text-center">Así Funciona una Instalación Fotovoltaica Comercial e Industrial.</h2>
 
   <div class="flex flex-col gap-6">
 
-    <div class="flex items-center justify-center bg-white p-6 border rounded">
-      <img src="/images/screens/fronius/img12.png" class="h-96">
+    <!-- Imagen -->
+    <div class="flex items-center justify-center bg-white p-6 border-2 rounded-lg shadow-xl">
+      <img src="/images/screens/fronius/img12.png" class="h-96 rounded-md shadow-lg">
     </div>
 
+    <!-- Tarjetas de los módulos -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
       {
-
         items.map((row, index) => (
-
-          <div class='bg-gray-500 flex flex-col gap-2 items-center justify-start text-center p-6 border rounded text-white'>
-
-            <div class="min-h-10 min-w-10 border rounded flex items-center justify-center">
-              <span class="text-lg font-medium text-yellow-400">{index+1}</span>
+          <div class="bg-gray-500 flex flex-col gap-4 items-center justify-start text-center p-6 border-2 rounded-lg shadow-md text-white transition-all hover:scale-105 hover:bg-gray-600">
+            <!-- Número -->
+            <div class="min-h-10 min-w-10 border-2 border-yellow-400 rounded-full flex items-center justify-center p-2 bg-yellow-500">
+              <span class="text-xl font-medium">{index+1}</span>
             </div>
 
+            <!-- Título y descripción -->
             <div>
-              <h3 class="text-xl font-medium">{row.title}</h3>
+              <h3 class="text-xl font-medium mb-2">{row.title}</h3>
               <p class="text-lg">{row.description}</p>
             </div>
-
           </div>
-
-        )
-
-      )}
-
+        ))
+      }
     </div>
 
   </div>
