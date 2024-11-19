@@ -62,24 +62,20 @@ const photos = [
 
 <Layout title="Sobre Nosotros">
   <!-- Sección con video de fondo -->
-  <div class="relative w-full h-[100vh]">
-    <BackgroundWithVideo 
-      url="https://blau-app-storage.s3.amazonaws.com/consultorias/mi-energia/MiEnergia-02.mov" 
-      class="absolute top-0 left-0 w-full h-full object-cover"
-    />
-
-    <!-- Logos de redes sociales sobre el video -->
-    <div class="absolute top-4 right-4 flex gap-6 z-10">
-      <img src="/images/mi-energia-logo/fronius-logo.jpeg" class="h-14" alt="Fronius logo" />
-      <img src="/images/screens/sobre-nosotros/img23.png" class="h-12" alt="Fronius logo ovalo" />
-    </div>
+  <div class="relative w-full h-[100vh] sm:h-[80vh]">
+  <BackgroundWithVideo 
+    url="https://blau-app-storage.s3.amazonaws.com/consultorias/mi-energia/MiEnergia-02.mov" 
+    class="absolute top-0 left-0  min-h-0 w-full h-full object-cover"
+  />
+  <div class="flex gap-4 justify-center relative bottom-16 h-0">
   </div>
 
   <!-- Secciones adicionales -->
   
   <div class="mt-6 mb-4">
   <PorQueMiEnergia />
-  </div>
+</div>
+
   <div class="mt-6 mb-4">
   <QueDiferenciaMiEnergia />
   </div>
