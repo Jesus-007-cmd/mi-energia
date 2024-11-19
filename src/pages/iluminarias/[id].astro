@@ -84,17 +84,19 @@ const selectedIluminaria = iluminarias[id];
 
 <Layout title={selectedIluminaria.title} hasBackground>
   <!-- Contenedor principal con columnas de igual altura y diseño refinado -->
-  <div class="min-h-screen bg-gray-100 mx-4 md:mx-20 lg:mx-40 xl:mx-60 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-24">
+  <div class="min-h-screen bg-gray-100 mx-4 md:mx-20 lg:mx-40 xl:mx-60 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-24 mb-6">
 
     <!-- Columna izquierda: Imagen del producto y botón -->
     <div class="flex flex-col items-center justify-center gap-6 bg-gray-800 p-8 rounded-lg shadow-lg h-[60vh]">
 
       <h1 class="text-2xl font-bold text-white text-center">{selectedIluminaria.title}</h1>
       <img src={selectedIluminaria.img} alt={selectedIluminaria.title} class="h-60 rounded-lg object-cover shadow-md">
-        
-       <a href={AppRoutes.sobreNosotrosRoute.route}>
+           <a href={AppRoutes.sobreNosotrosRoute.route}>
     <CustomButton buttonClass={ButtonClass.WhiteBorderButtonClass}>Solicitar Cotización</CustomButton>
   </a>
+  <p>
+  <div/>
+    
     </div>
 
     <!-- Columna derecha: Detalles del producto -->
@@ -119,15 +121,17 @@ const selectedIluminaria = iluminarias[id];
           {selectedIluminaria.caracteristicas.map((row) => <li>{row}</li>)}
         </ul>
       </div>
-    </div>
-  </div>
-
-  <!-- Botón para regresar -->
-  <div class="text-center mt-12">
+       <!-- Botón para regresar -->
+  <div class="text-center mt-6">
     <a href="/iluminarias">
       <button class="px-6 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 focus:outline-none">
         Volver a Iluminarias
       </button>
     </a>
   </div>
+  
+    </div>
+  </div>
+
+ 
 </Layout>
