@@ -1,4 +1,10 @@
 ---
+// Classes
+import ButtonClass from '../../classes/ButtonClass';
+
+
+// Routes
+import AppRoutes from '../../routes';
 
 // Components
 import Layout from '../../layouts/Layout.astro';
@@ -85,12 +91,10 @@ const selectedIluminaria = iluminarias[id];
 
       <h1 class="text-2xl font-bold text-white text-center">{selectedIluminaria.title}</h1>
       <img src={selectedIluminaria.img} alt={selectedIluminaria.title} class="h-60 rounded-lg object-cover shadow-md">
-      <button 
-        class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none"
-        disabled
-      >
-        Solicitar Cotización
-      </button>
+        
+       <a href={AppRoutes.sobreNosotrosRoute.route}>
+    <CustomButton buttonClass={ButtonClass.WhiteBorderButtonClass}>Solicitar Cotización</CustomButton>
+  </a>
     </div>
 
     <!-- Columna derecha: Detalles del producto -->
