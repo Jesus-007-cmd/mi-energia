@@ -23,23 +23,25 @@ const explicacionesList = [
 
 <section class="flex flex-col p-6 md:pb-16 md:px-20 lg:px-40 xl:px-60 bg-gray-700 text-white">
 
+  <!-- Título -->
   <div class="flex flex-col mb-8">
     <h2 class="text-2xl md:text-3xl font-semibold text-center text-gray-100">Beneficios clave de BESS</h2>
-    <p class="text-center text-lg md:text-xl text-gray-300 mb-6">
-      Gracias a estrategias como time shifting y peak shaving, puedes ahorrar
-      significativamente en tu factura eléctrica.
+    <p class="text-center text-lg md:text-2xl text-gray-300 mb-6">
+      Gracias a estrategias como time shifting y peak shaving, puedes ahorrar significativamente en tu factura eléctrica.
     </p>
   </div>
 
+  <!-- Contenedores -->
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
 
     {explicacionesList.map((row) => (
-      <div class="p-6 bg-gray-600 border-2 border-transparent rounded-lg text-center transition-all duration-300 ease-in-out hover:scale-105 hover:border-sky-300 shadow-lg">
-        <h3 class="font-semibold text-sky-300 text-xl mb-4">{row.title}</h3>
-        <p class="text-sm md:text-base text-gray-200">{row.description}</p>
+      <div class="p-6 bg-gray-600 border-2 border-sky-300 rounded-lg text-center transition-all duration-300 ease-in-out hover:scale-105 hover:border-[#62b4e4] shadow-md">
+        <h3 class="font-semibold text-[#62b4e4] text-2xl mb-4">{row.title}</h3>
+        <p class="text-sm md:text-xl text-gray-200">{row.description}</p>
       </div>
     ))}
 
   </div>
 
 </section>
+

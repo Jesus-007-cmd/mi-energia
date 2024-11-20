@@ -22,15 +22,14 @@ type Props = {
 		  }
   
 		  const imageClasses = (index: number) => {
-			return `h-[55vh] w-full md:w-[55%] ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} rounded-lg shadow-lg hover:scale-105`
+			return `h-[55vh] w-full md:basis-[70%] md:w-auto ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} rounded-lg shadow-lg hover:scale-105`
 		  }
-  
 		  const textContainerClasses = (index: number) => {
-			return `p-8 ${index % 2 === 0 ? 'bg-neutral-800 text-white' : 'bg-white text-black'} flex flex-col justify-center rounded-lg shadow-md`
+			return `p-8 md:basis-[30%] ${index % 2 === 0 ? 'bg-neutral-800 text-white' : 'bg-gray-200 text-black'} flex flex-col justify-center rounded-lg shadow-md`
 		  }
   
 		  return (
-			<div className="flex flex-col md:flex-row gap-8 mb-12 transition-all duration-300 hover:shadow-lg hover:translate-y-1 items-center" key={key}>
+			<div className="flex flex-col md:flex-row gap-8 mb-12 transition-all duration-300 hover:shadow-lg hover:translate-y-1 " key={key}>
 			  {/* Text container */}
 			  <div className={textContainerClasses(key)}>
 				<h4 className="text-sm font-semibold tracking-wide text-gray-300 uppercase">{row.subtitle}</h4>

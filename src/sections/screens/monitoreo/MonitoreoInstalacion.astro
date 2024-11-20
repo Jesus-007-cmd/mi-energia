@@ -1,37 +1,57 @@
 ---
 
-const monitoreoList = [
+const monitoreoList2 = [
   'Supervisa tu consumo y rendimiento energético en tiempo real.',
   'Garantiza la funcionalidad y reduce el período de amortización.',
   'Identifica y optimiza el consumo de energía.',
   'Mantén tu instalación actualizada y ahorra dinero con extensiones individuales.',
   'Extiende la garantía sin cargo.'
 ];
+const monitoreoList = [
+  'Garantiza la funcionalidad.',
+  'Reduce el período de amortización.',
+  'Exponga a los derrochadores de energía.',
+  'Analice y optimice el consumo de energía.',
+  'Mantenga la instalación actualizada.'
+];
 
 ---
-<section class="border-2 md:grid-cols-2 gap-6 mx-4 md:mx-20 lg:mx-40 xl:mx-60 py-12 px-12">
-  <!-- Título y descripción -->
-  <div class="flex flex-col ">
-    <h3 class="text-2xl font-bold text-gray-800 text-center">Monitoreo en su instalación fotovoltaica en todo momento</h3>
-    <p class="text-lg text-gray-600 text-center">Con la herramienta de monitoreo gratuita Fronius Solar.web puedes supervisar el consumo y rendimiento energético en todo momento:</p>
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-4 md:mx-20 lg:mx-40 xl:mx-60 py-12 px-12 bg-gray-900 text-gray-200 rounded-lg shadow-lg">
+  <!-- Recuadro de texto a la izquierda -->
+  <div class="flex flex-col border border-gray-700 rounded-lg p-6 bg-gradient-to-br from-gray-800 to-gray-900 justify-center shadow-md">
+    <h3 class="text-xl md:text-2xl font-semibold text-gray-100 mb-4 text-center">
+      Monitoree su instalación fotovoltaica en todo momento
+    </h3>
+    <p class="text-lg text-gray-400 text-center">
+      Con la herramienta de monitoreo gratuita Fronius Solar.web, puede supervisar el consumo y rendimiento energético en todo momento y aprovechar al máximo su instalación fotovoltaica.
+    </p>
   </div>
 
-  <!-- Lista de elementos con iconos y texto -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
+  <!-- Lista de elementos a la derecha -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {monitoreoList
+      .map((row, index) => (
+        <div
+          class="flex flex-col border border-gray-700 rounded-lg p-6 bg-gradient-to-br from-gray-800 to-gray-900 items-center justify-center shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:border-sky-500 text-center"
+        >
+          <!-- Icono -->
+          <div class="w-16 h-16 rounded-lg bg-gray-700 flex items-center justify-center text-sky-500 shadow-lg mb-4">
+            <i class={`fas ${
+              index === 0
+                ? "fa-tachometer-alt"
+                : index === 1
+                ? "fa-cogs"
+                : index === 2
+                ? "fa-lightbulb"
+                : "fa-tools"
+            } text-3xl`}></i>
+          </div>
 
-    {monitoreoList.map((row, index) => (
-      <div class="flex flex-col border-2 rounded-lg p-6 bg-white items-center justify-center shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:border-gray-800 text-center">  <!-- Agregar text-center aquí -->
-        <!-- Icono según el tema -->
-        <div class=" w-16 h-16 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700 shadow-lg">
-          <i class={`fas ${index === 0 ? 'fa-tachometer-alt' : index === 1 ? 'fa-cogs' : index === 2 ? 'fa-lightbulb' : index === 3 ? 'fa-wrench' : 'fa-shield-alt'} text-3xl`}></i>
+          <!-- Texto -->
+          <p class="text-sm md:text-base lg:text-lg">{row}</p>
         </div>
-
-        <!-- Texto -->
-        <p class="text-sm md:text-base lg:text-lg text-gray-800">{row}</p>
-      </div>
-    ))}
-
+      ))}
   </div>
-
 </section>
+
 
